@@ -1,15 +1,8 @@
 const { Sequelize } = require('sequelize');
-const config = require('../config/config.js');
 
-const env = process.env.NODE_ENV || 'development';
-const sequelizeConfig = config[env];
 
-const sequelize = new Sequelize(
-  sequelizeConfig.database,
-  sequelizeConfig.username,
-  sequelizeConfig.password,
-  sequelizeConfig
-);
+
+const sequelize = new Sequelize(POSTGRES_URL="postgres://default:0Lm7FZHVBivE@ep-royal-firefly-a49bp312-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require");
 
 const db = {
   sequelize,

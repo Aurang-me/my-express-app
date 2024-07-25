@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./models/index.js');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port =  3000;
 
 // Test the database connection
 db.sequelize.authenticate()
